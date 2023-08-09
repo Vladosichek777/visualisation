@@ -1,0 +1,39 @@
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  width: calc(350 / 1366 * 100%);
+}
+
+.progress-line {
+  width: calc(254 / 350 * 100%);
+  height: 1px;
+  background-color: white;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+  &__arrow-prev {
+    background-image: url(../../../../assets/icons/arrow-prev.svg);
+    width: 10px;
+    height: 16px;
+    cursor: pointer;
+  }
+  &__arrow-next {
+    background-image: url(../../../../assets/icons/arrow-next.svg);
+    width: 10px;
+    height: 16px;
+    cursor: pointer;
+  }
+  &__mouse {
+    position: absolute;
+    width: 20%;
+    height: 7px;
+    top: -2.5px;
+    background-color: red;
+    cursor: pointer;
+  }
+}
+.progress--position {
+  position: absolute;
+  bottom: 85px;
+  right: 320px;
+}

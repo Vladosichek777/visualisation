@@ -1,4 +1,18 @@
 // COLORS
 
 $background-first: rgba(34, 34, 36, 1);
-$background-second: #2E2E31;
+$background-second: #2e2e31;
+
+// Titles
+
+@mixin titleh2 {
+  font-family: Bebas Neue;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px; /* 136% */
+  letter-spacing: 0.5px;
+  color: $bigTitleColor;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}

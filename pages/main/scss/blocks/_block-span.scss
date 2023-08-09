@@ -1,0 +1,28 @@
+.block-span {
+  font-family: Bebas Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 107.143% */
+  letter-spacing: 0.28px;
+  width: 25%;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(86, 86, 86, 0.328);
+  }
+  &__important {
+    color: $textSpan;
+  }
+
+  &__text {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: $textIntoCards;
+  }
+}

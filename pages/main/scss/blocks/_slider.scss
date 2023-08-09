@@ -1,0 +1,21 @@
+.slider {
+  height: 517px;
+  min-width: 100000px;
+  position: relative;
+
+  overflow-x: hidden;
+  position: relative;
+  &-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    height: 100%;
+    transition: all 0.5s;
+    img {
+      height: 100%;
+      max-width: 870px;
+      margin-right: 20px;
+    }
+  }
+}

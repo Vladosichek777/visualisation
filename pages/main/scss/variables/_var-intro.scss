@@ -1,0 +1,31 @@
+//COLORS
+
+$intro-title: rgba(239, 239, 239, 1);
+$intro-subtitle: rgba(239, 239, 239, 1);
+
+$navigation-btn-background: rgba(234, 76, 20, 1);
+$navigation-btn: rgba(255, 255, 255, 1);
+
+@mixin big-title {
+  color: #fff;
+  font-family: Bebas Neue;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px; /* 96.667% */
+  letter-spacing: 0.6px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+@mixin description {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  letter-spacing: 0.36px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: rgba(239, 239, 239, 1);
+}
