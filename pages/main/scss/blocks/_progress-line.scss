@@ -1,6 +1,7 @@
 .progress-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: calc(350 / 1366 * 100%);
 }
 
@@ -35,5 +36,5 @@
 .progress--position {
   position: absolute;
   bottom: 85px;
-  right: 320px;
+  right: 225px;
 }

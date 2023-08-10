@@ -462,21 +462,20 @@ body {
 }
 .slider-line {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 0px;
   font-size: 0;
   height: 100%;
   transition: all 0.5s;
 }
 .slider-line img {
   height: 100%;
-  max-width: 870px;
-  margin-right: 20px;
+  width: 870px;
 }
 
 .progress-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 25.6222547584%;
 }
 
@@ -512,7 +511,7 @@ body {
 .progress--position {
   position: absolute;
   bottom: 85px;
-  right: 320px;
+  right: 225px;
 }
 
 .block-span {
@@ -529,6 +528,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 5px;
+  position: relative;
 }
 .block-span:hover {
   background-color: rgba(86, 86, 86, 0.328);
@@ -542,9 +542,29 @@ body {
   color: rgb(239, 239, 239);
 }
 
+.block-span--window {
+  position: absolute;
+  display: none;
+  max-width: 262px;
+  min-height: 101px;
+  padding: 10px;
+  border-radius: 0px 6px 6px 6px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #9da0a3;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.14px;
+  text-align: left;
+}
+
 .main {
   position: relative;
   background-color: rgb(34, 34, 36);
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .intro {
@@ -552,6 +572,7 @@ body {
   align-items: end;
   padding-top: 60px;
   padding-bottom: 126px;
+  position: relative;
 }
 .intro__info {
   max-width: 31.0395314788%;

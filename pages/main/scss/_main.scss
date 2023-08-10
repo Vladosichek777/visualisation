@@ -1,6 +1,8 @@
 .main {
   position: relative;
   background-color: $background-first;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .intro {
@@ -8,6 +10,7 @@
   align-items: end;
   padding-top: 60px;
   padding-bottom: 126px;
+  position: relative;
   &__info {
     max-width: calc(424 / 1366 * 100%);
     margin-right: calc(73 / 1366 * 100%);
