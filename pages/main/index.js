@@ -31,12 +31,14 @@ let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
 const arrImages = Array.from(sliderLine.children);
 const progressArrowNext = document.querySelector(".progress-line__arrow-next");
 const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
+let progressLine = document.querySelector(".progress-line__mouse");
 
 for (let i = 0; i < arrImages.length; i++) {
   arrImages[i].id = i;
 }
 
 let position = 0;
+let percentPositionFromWidth = 0;
 let currentIdImage;
 let coordsNextImage;
 for (let image of arrImages) {
@@ -59,7 +61,7 @@ progressArrowNext.addEventListener("click", () => {
       position -= coordsNextImage;
       sliderLine.style.left = position + "px";
       ++currentIdImage;
-      console.log(currentIdImage);
+      updatePercentPosition();
     }
     setTimeout(() => {
       isClickPending = false;
@@ -79,7 +81,7 @@ progressArrowPrev.addEventListener("click", () => {
       position += coordsNextImage;
       sliderLine.style.left = position + "px";
       --currentIdImage;
-      console.log(currentIdImage);
+      updatePercentPosition();
     }
 
     setTimeout(() => {
@@ -98,6 +100,7 @@ for (let image of arrImages) {
       position -= coordsNextImage;
       sliderLine.style.left = position + "px";
       ++currentIdImage;
+      updatePercentPosition();
       setTimeout(() => {
         isClickPending = false;
       }, 300);
@@ -105,4 +108,9 @@ for (let image of arrImages) {
   });
 }
 
-
+// progress-line mouse
+function updatePercentPosition() {
+  percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
+  progressLine.style.left = percentPositionFromWidth + "%";
+}
+ 

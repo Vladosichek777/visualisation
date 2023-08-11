@@ -523,8 +523,9 @@ body {
   width: 20%;
   height: 7px;
   top: -2.5px;
+  left: 0%;
   background-color: red;
-  cursor: pointer;
+  transition: all 0.4s;
 }
 
 .progress--position {
