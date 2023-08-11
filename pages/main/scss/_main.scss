@@ -10,6 +10,8 @@
   align-items: end;
   padding-top: 60px;
   padding-bottom: 126px;
+  padding-left: 30px;
+  padding-right: 30px;
   position: relative;
   &__info {
     max-width: calc(424 / 1366 * 100%);
@@ -26,6 +28,30 @@
     }
     &-desc {
       @include description;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .intro {
+    display: block;
+    &__info {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+      max-width: 560px;
+      .info__text {
+        align-items: center;
+        row-gap: 39px;
+        padding-bottom: 44px;
+      }
+      &-title {
+        @include big-title-tablet;
+        text-align: center;
+      }
+      &-desc {
+        text-align: center;
+      }
     }
   }
 }

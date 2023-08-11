@@ -28,13 +28,15 @@ for (let block of blockSpan) {
 
 const sliderLine = document.querySelector(".slider-line");
 let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
-const arrImages = Array.from(sliderLine.children);
+// const arrImages = Array.from(sliderLine.children);
+const arrImages = document.querySelectorAll(".slider-line > picture > img");
 const progressArrowNext = document.querySelector(".progress-line__arrow-next");
 const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
 let progressLine = document.querySelector(".progress-line__mouse");
 
 for (let i = 0; i < arrImages.length; i++) {
   arrImages[i].id = i;
+  console.log(arrImages[i]);
 }
 
 let position = 0;
@@ -113,4 +115,3 @@ function updatePercentPosition() {
   percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
   progressLine.style.left = percentPositionFromWidth + "%";
 }
- 

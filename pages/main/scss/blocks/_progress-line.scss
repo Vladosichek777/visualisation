@@ -14,15 +14,27 @@
   margin-left: 10px;
   &__arrow-prev {
     background-image: url(../../../assets/icons/arrow-prev.svg);
-    width: 10px;
-    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    &:hover {
+      background-color: rgba(247, 245, 242, 0.111);
+    }
   }
   &__arrow-next {
     background-image: url(../../../assets/icons/arrow-next.svg);
-    width: 10px;
-    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    &:hover {
+      background-color: rgba(247, 245, 242, 0.111);
+    }
   }
   &__mouse {
     position: absolute;
@@ -36,6 +48,17 @@
 }
 .progress--position {
   position: absolute;
-  bottom: 85px;
+  bottom: 65px;
   right: 225px;
 }
+
+@media (max-width: 1350px) {
+  .progress-wrapper {
+    width: 340px;
+  }
+  .progress--position {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
