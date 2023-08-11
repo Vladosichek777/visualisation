@@ -1,0 +1,36 @@
+@use "../variables/var-animation-number" as *;
+
+.animation-number {
+  background-color: $animation-number-background-color;
+  &-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    max-width: 547px;
+    margin-right: 40px;
+    &-interactive {
+      width: 218px;
+      height: 205px;
+      background-color: aqua;
+      margin-right: 15px;
+    }
+
+    &-text-desctop {
+      @include animation-number-subtext;
+      max-width: 247px;
+    }
+
+    &-title {
+      @include animation-number-title;
+      margin-top: 61px;
+    }
+  }
+  &__image {
+    max-width: 1062px;
+  }
+}
