@@ -153,6 +153,7 @@
     }
     &__cards {
       flex-direction: column;
+      margin-bottom: 66px;
       &-item {
         width: 100%;
         justify-content: left;
@@ -172,6 +173,7 @@
 @media (max-width: 600px) {
   .our-services {
     &__cards {
+      margin-bottom: 43px;
       &-item {
         padding: 15px 14px;
         .cards-item__image {
@@ -184,6 +186,10 @@
           text-decoration: none;
         }
       }
+    }
+    &__some-benefits {
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }

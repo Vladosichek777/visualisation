@@ -645,6 +645,26 @@ body {
   text-align: left;
 }
 
+@media (max-width: 1300px) {
+  .block-span {
+    width: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .block-span {
+    width: 100%;
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .block-span:not(:last-child) {
+    border-bottom: 3px solid rgba(226, 225, 225, 0.1843137255);
+  }
+  .block-span--window {
+    max-width: 150px;
+    min-height: 50px;
+    font-size: 13px;
+  }
+}
 .main {
   position: relative;
   background-color: rgb(34, 34, 36);
@@ -831,6 +851,7 @@ body {
   }
   .our-services__cards {
     flex-direction: column;
+    margin-bottom: 66px;
   }
   .our-services__cards-item {
     width: 100%;
@@ -846,6 +867,9 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .our-services__cards {
+    margin-bottom: 43px;
+  }
   .our-services__cards-item {
     padding: 15px 14px;
   }
@@ -857,6 +881,10 @@ body {
     font-size: 13px;
     line-height: 21px;
     text-decoration: none;
+  }
+  .our-services__some-benefits {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
