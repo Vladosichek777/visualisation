@@ -4,6 +4,8 @@
   padding-top: $padding-header;
   padding-bottom: $padding-header;
   border-bottom: 0.6px solid $navigation-border;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .navigation {
@@ -12,12 +14,6 @@
   &__nav {
     min-height: 100%;
   }
-  &__img {
-    display: block;
-    width: 186px;
-    height: 47px;
-  }
-
   &__list {
     display: flex;
     margin-block-start: 0em;
@@ -71,6 +67,7 @@
   &__contacts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 18px;
     font-weight: 500;
     line-height: 27px; /* 150% */
@@ -82,6 +79,32 @@
     &-post {
       color: $navigation-contact;
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .navigation__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navigation__picture {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .navigation__contacts {
+    &-post {
+      display: none;
+      font-size: 12px;
+      letter-spacing: 0.12px;
     }
   }
 }
