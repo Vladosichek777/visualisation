@@ -41,7 +41,6 @@ let progressLine = document.querySelector(".progress-line__mouse");
 
 for (let i = 0; i < arrImages.length; i++) {
   arrImages[i].id = i;
-  console.log(arrImages[i]);
 }
 
 let position = 0;
@@ -120,3 +119,32 @@ function updatePercentPosition() {
   percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
   progressLine.style.left = percentPositionFromWidth + "%";
 }
+
+// animation-number
+const animationNumberSection = document.querySelector(".animation-number");
+const animationLine = document.querySelector(".info-interactive__line");
+let runNumber = document.querySelector(".number");
+
+let observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((line) => {
+      if (line.isIntersecting) {
+        animationLine.style.width = 45 + "px";
+        let i = 0;
+        function runIteration() {
+          if (i <= 20) {
+            runNumber.innerHTML = i;
+            i++;
+            setTimeout(runIteration, 45);
+          }
+        }
+        runIteration();
+        observer.unobserve(line.target);
+      }
+    });
+  },
+  { rootMargin: "0px 0px -200px 0px" }
+);
+
+observer.observe(animationNumberSection);
+observer.observe(runNumber);

@@ -32,3 +32,25 @@ body {
     overflow-x: hidden;
   }
 }
+
+@media (max-width: 1750px) {
+  .container {
+    &--animation-number {
+      max-width: 1366px;
+      padding-left: 30px;
+      padding-right: 30px;
+      box-sizing: content-box;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    &--animation-number {
+      
+      padding-left: 20px;
+      padding-right: 20px;
+    
+    }
+  }
+}
