@@ -28,6 +28,17 @@ $navigation-btn: rgba(255, 255, 255, 1);
   letter-spacing: 0.7px;
 }
 
+@mixin big-title-mobile {
+  color: #fff;
+  text-align: center;
+  font-family: Bebas Neue;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.41px;
+}
+
 @mixin description {
   font-family: Roboto;
   font-size: 18px;
@@ -38,4 +49,14 @@ $navigation-btn: rgba(255, 255, 255, 1);
   margin-block-start: 0em;
   margin-block-end: 0em;
   color: rgba(239, 239, 239, 1);
+}
+
+@mixin description-mobile {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 161.538% */
 }

@@ -18,3 +18,9 @@ body {
   margin: 0 auto;
   outline: 1px solid red;
 }
+
+@media (max-width: 350px) {
+  .container {
+    overflow-x: hidden;
+  }
+}

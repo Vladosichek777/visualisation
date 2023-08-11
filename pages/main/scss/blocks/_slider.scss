@@ -31,3 +31,14 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .slider {
+    height: 210px;
+    &-line {
+      img {
+        width: 280px;
+      }
+    }
+  }
+}

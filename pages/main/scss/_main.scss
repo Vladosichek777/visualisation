@@ -1,7 +1,8 @@
 .main {
   position: relative;
   background-color: $background-first;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   box-sizing: border-box;
 }
 
@@ -10,8 +11,6 @@
   align-items: end;
   padding-top: 60px;
   padding-bottom: 126px;
-  padding-left: 30px;
-  padding-right: 30px;
   position: relative;
   &__info {
     max-width: calc(424 / 1366 * 100%);
@@ -35,6 +34,7 @@
 @media (max-width: 1350px) {
   .intro {
     display: block;
+    padding-top: 100px;
     &__info {
       margin-left: auto;
       margin-right: auto;
@@ -51,6 +51,32 @@
       }
       &-desc {
         text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .intro {
+    padding-top: 80px;
+    &__info {
+      margin-bottom: 41px;
+
+      .info__text {
+        row-gap: 10px;
+        padding-bottom: 20px;
+      }
+
+      &-title {
+        @include big-title-mobile;
+      }
+
+      &-desc {
+        @include description-mobile;
       }
     }
   }

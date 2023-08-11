@@ -53,3 +53,15 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .button {
+    &--intro {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 17px 42px;
+    }
+  }
+}
