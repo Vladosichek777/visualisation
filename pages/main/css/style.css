@@ -336,6 +336,7 @@ body {
 }
 .container--animation-number {
   max-width: 1920px;
+  padding: 0;
 }
 
 @media (max-width: 350px) {
@@ -906,7 +907,6 @@ body {
 .animation-number__info-interactive {
   width: 218px;
   height: 205px;
-  background-color: aqua;
   margin-right: 15px;
 }
 .animation-number__info-text-desctop {
@@ -934,7 +934,7 @@ body {
   margin-top: 61px;
 }
 .animation-number__image {
-  max-width: 1062px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

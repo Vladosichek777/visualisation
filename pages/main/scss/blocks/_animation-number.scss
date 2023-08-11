@@ -16,7 +16,6 @@
     &-interactive {
       width: 218px;
       height: 205px;
-      background-color: aqua;
       margin-right: 15px;
     }
 
@@ -31,6 +30,6 @@
     }
   }
   &__image {
-    max-width: 1062px;
+    width: 100%;
   }
 }

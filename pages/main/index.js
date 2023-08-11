@@ -21,8 +21,13 @@ for (let block of blockSpan) {
     div.style.display = "none";
   });
   block.addEventListener("mousemove", (e) => {
-    div.style.top = e.pageY + 30 + "px";
-    div.style.left = e.pageX + 30 + "px";
+    if (e.pageX + div.offsetWidth > document.body.offsetWidth) {
+      div.style.top = e.pageY + 30 + "px";
+      div.style.left = e.pageX - div.offsetWidth - 30 + "px";
+    } else {
+      div.style.top = e.pageY + 30 + "px";
+      div.style.left = e.pageX + 30 + "px";
+    }
   });
 }
 
