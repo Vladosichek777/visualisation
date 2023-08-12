@@ -148,3 +148,44 @@ let observer = new IntersectionObserver(
 
 observer.observe(animationNumberSection);
 observer.observe(runNumber);
+
+//nested-list
+
+const nestedListQuestions = document.querySelectorAll(".nested-lists-questions__item");
+const nestedListAnswersBlock = document.querySelectorAll(".nested-lists-answers-item");
+const dropDownAnswers = document.querySelectorAll(".dropdown-answer");
+
+nestedListQuestions.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (item.classList.contains("nested-lists-questions__item--active")) {
+      return;
+    } else {
+      nestedListQuestions.forEach((question) => {
+        question.classList.remove("nested-lists-questions__item--active");
+      });
+      nestedListAnswersBlock.forEach((answersBlock) => {
+        answersBlock.classList.add("nested-lists-answers-item--hidden");
+        if (item.dataset.group === answersBlock.dataset.group) {
+          answersBlock.classList.remove("nested-lists-answers-item--hidden");
+        }
+      });
+      item.classList.add("nested-lists-questions__item--active");
+    }
+  });
+});
+dropDownAnswers.forEach((answer) => {
+  answer.addEventListener("click", () => {
+    if (!answer.classList.contains("dropdown-answer--hidden")) {
+      return;
+    } else {
+      dropDownAnswers.forEach((answer2) => {
+        answer2.classList.add("dropdown-answer--hidden");
+        answer2.classList.remove("dropdown-answer--title-active");
+      });
+      answer.classList.remove("dropdown-answer--hidden");
+      answer.classList.add("dropdown-answer--title-active");
+    }
+  });
+});
+
+

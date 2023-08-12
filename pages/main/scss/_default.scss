@@ -27,7 +27,8 @@ body {
   }
 
   &--nested-list {
-    overflow-x:visible;
+    padding-left: 60px;
+    overflow-x: visible;
     outline: none;
   }
 }
@@ -52,10 +53,8 @@ body {
 @media (max-width: 500px) {
   .container {
     &--animation-number {
-      
       padding-left: 20px;
       padding-right: 20px;
-    
     }
   }
 }

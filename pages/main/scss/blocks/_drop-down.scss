@@ -1,5 +1,33 @@
 .dropdown-answer {
   margin-bottom: 80px;
+  &--hidden {
+    p,
+    ul,
+    a {
+      display: none;
+    }
+  }
+
+  h5 {
+    &::before {
+      content: url(../../../../assets/icons/nested-list/arrow-bottom-inactive.svg);
+      margin-right: 10px;
+      width: 16px;
+      height: 10px;
+    }
+  }
+
+  &--title-active {
+    h5 {
+      color: #ea4c14;
+      &::before {
+        content: url(../../../../assets/icons/nested-list/arrow-bottom-active.svg);
+        margin-right: 10px;
+        width: 16px;
+        height: 10px;
+      }
+    }
+  }
   &__title {
     text-align: left;
     font-family: Roboto;
@@ -13,12 +41,6 @@
     padding-bottom: 24px;
     margin-block-start: 0em;
     margin-block-end: 0em;
-    &::before {
-      content: url(../../../../assets/icons/nested-list/arrow-bottom-inactive.svg);
-      margin-right: 10px;
-      width: 16px;
-      height: 10px;
-    }
   }
 
   &__text {
@@ -34,9 +56,6 @@
     &-title {
       margin-left: -40px;
       list-style: none;
-    }
-    &--hidden {
-      display: none;
     }
   }
 }

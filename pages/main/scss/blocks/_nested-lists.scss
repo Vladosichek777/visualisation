@@ -31,7 +31,6 @@
         }
 
         &--active {
-          margin-left: 20px;
           &::before {
             content: url(../../../../assets/icons/nested-list/arrow-right.png);
             position: absolute;
@@ -61,5 +60,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .nested-lists-wrapper {
+    display: none;
   }
 }
