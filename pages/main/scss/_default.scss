@@ -25,6 +25,11 @@ body {
     max-width: 1920px;
     padding: 0;
   }
+
+  &--nested-list {
+    overflow-x:visible;
+    outline: none;
+  }
 }
 
 @media (max-width: 350px) {

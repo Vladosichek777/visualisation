@@ -1,0 +1,42 @@
+.dropdown-answer {
+  margin-bottom: 80px;
+  &__title {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 122.727% */
+    letter-spacing: 0.22px;
+    color: #efefef;
+    cursor: pointer;
+    padding-bottom: 24px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    &::before {
+      content: url(../../../../assets/icons/nested-list/arrow-bottom-inactive.svg);
+      margin-right: 10px;
+      width: 16px;
+      height: 10px;
+    }
+  }
+
+  &__text {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 122.727% */
+    letter-spacing: 0.22px;
+    color: #efefef;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    &-title {
+      margin-left: -40px;
+      list-style: none;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+}
