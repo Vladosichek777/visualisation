@@ -187,5 +187,3 @@ dropDownAnswers.forEach((answer) => {
     }
   });
 });
-
-

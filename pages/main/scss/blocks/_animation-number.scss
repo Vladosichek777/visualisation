@@ -24,7 +24,7 @@
       animation: all 2s;
       .info-interactive__line {
         position: absolute;
-        background-color: #ea4c14;
+        background-color: $main-color;
         top: 0;
         right: 0;
         bottom: 0;
@@ -46,7 +46,7 @@
           transform: rotateY(180deg);
         }
         .number {
-          color: #ea4c14;
+          color:$main-color;
           font-size: 85px;
           margin-block-start: 0em;
           margin-block-end: 0em;

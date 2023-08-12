@@ -103,7 +103,7 @@
       text-decoration: none;
 
       &:hover {
-        border-color: #ea4c14;
+        border-color: $main-color;
         transform: scale(1.03);
       }
       .cards-item__image {
@@ -185,5 +185,44 @@
       padding-left: 30px;
       padding-right: 30px;
     }
+  }
+}
+
+.steps {
+  background-color: $background-first;
+
+  &-inner {
+    padding-top: 103px;
+    padding-bottom: 111px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 83px;
+  }
+
+  &__title {
+    @include titleh2;
+    text-transform: uppercase;
+    span {
+      color: $main-color;
+    }
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__arrow {
+      height: 20px;
+      align-self: center;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .steps {
+    display: none;
   }
 }

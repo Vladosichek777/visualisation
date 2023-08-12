@@ -19,7 +19,7 @@
 
   &--title-active {
     h5 {
-      color: #ea4c14;
+      color: $main-color;
       &::before {
         content: url(../../../../assets/icons/nested-list/arrow-bottom-active.svg);
         margin-right: 10px;
