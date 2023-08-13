@@ -32,92 +32,92 @@ for (let block of blockSpan) {
 }
 
 const sliderLine = document.querySelector(".slider-line");
-// let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
-// const arrImages = document.querySelectorAll(".slider-line > picture > img");
-// const progressArrowNext = document.querySelector(".progress-line__arrow-next");
-// const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
-// let progressLine = document.querySelector(".progress-line__mouse");
+let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
+const arrImages = document.querySelectorAll(".slider-line > picture > img");
+const progressArrowNext = document.querySelector(".progress-line__arrow-next");
+const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
+let progressLine = document.querySelector(".progress-line__mouse");
 
-// for (let i = 0; i < arrImages.length; i++) {
-//   arrImages[i].id = i;
-// }
-// function slideImageNext() {
-//   position -= coordsNextImage;
-//   sliderLine.style.left = position + "px";
-//   ++currentIdImage;
-//   updatePercentPosition();
-// }
+for (let i = 0; i < arrImages.length; i++) {
+  arrImages[i].id = i;
+}
+function slideImageNext() {
+  position -= coordsNextImage;
+  sliderLine.style.left = position + "px";
+  ++currentIdImage;
+  updatePercentPosition();
+}
 
-// let position = 0;
-// let percentPositionFromWidth = 0;
-// let currentIdImage;
-// let coordsNextImage;
-// for (let image of arrImages) {
-//   if (image.getBoundingClientRect().left - sliderMarginLeft === 0) {
-//     currentIdImage = +image.id;
-//   }
-// }
+let position = 0;
+let percentPositionFromWidth = 0;
+let currentIdImage;
+let coordsNextImage;
+for (let image of arrImages) {
+  if (image.getBoundingClientRect().left - sliderMarginLeft === 0) {
+    currentIdImage = +image.id;
+  }
+}
 
-// let isClickPending = false;
-// progressArrowNext.addEventListener("click", () => {
-//   if (isClickPending) {
-//     return;
-//   } else {
-//     isClickPending = true;
-//     if (currentIdImage >= arrImages.length - 1) {
-//       isClickPending = false;
-//       return;
-//     } else {
-//       coordsNextImage = document.getElementById(currentIdImage + 1).getBoundingClientRect().left - sliderMarginLeft;
-//       slideImageNext();
-//     }
-//     setTimeout(() => {
-//       isClickPending = false;
-//     }, 600);
-//   }
-// });
+let isClickPending = false;
+progressArrowNext.addEventListener("click", () => {
+  if (isClickPending) {
+    return;
+  } else {
+    isClickPending = true;
+    if (currentIdImage >= arrImages.length - 1) {
+      isClickPending = false;
+      return;
+    } else {
+      coordsNextImage = document.getElementById(currentIdImage + 1).getBoundingClientRect().left - sliderMarginLeft;
+      slideImageNext();
+    }
+    setTimeout(() => {
+      isClickPending = false;
+    }, 600);
+  }
+});
 
-// progressArrowPrev.addEventListener("click", () => {
-//   if (isClickPending) {
-//     return;
-//   } else {
-//     isClickPending = true;
-//     if (currentIdImage === 0) {
-//       isClickPending = false;
-//       return;
-//     } else {
-//       position += coordsNextImage;
-//       sliderLine.style.left = position + "px";
-//       --currentIdImage;
-//       updatePercentPosition();
-//     }
+progressArrowPrev.addEventListener("click", () => {
+  if (isClickPending) {
+    return;
+  } else {
+    isClickPending = true;
+    if (currentIdImage === 0) {
+      isClickPending = false;
+      return;
+    } else {
+      position += coordsNextImage;
+      sliderLine.style.left = position + "px";
+      --currentIdImage;
+      updatePercentPosition();
+    }
 
-//     setTimeout(() => {
-//       isClickPending = false;
-//     }, 600);
-//   }
-// });
+    setTimeout(() => {
+      isClickPending = false;
+    }, 600);
+  }
+});
 
-// for (let image of arrImages) {
-//   image.addEventListener("click", () => {
-//     if (isClickPending) {
-//       return;
-//     } else {
-//       isClickPending = true;
-//       coordsNextImage = Math.round(image.getBoundingClientRect().left - sliderMarginLeft);
-//       slideImageNext();
-//     }
-//     setTimeout(() => {
-//       isClickPending = false;
-//     }, 300);
-//   });
-// }
+for (let image of arrImages) {
+  image.addEventListener("click", () => {
+    if (isClickPending) {
+      return;
+    } else {
+      isClickPending = true;
+      coordsNextImage = Math.round(image.getBoundingClientRect().left - sliderMarginLeft);
+      slideImageNext();
+    }
+    setTimeout(() => {
+      isClickPending = false;
+    }, 300);
+  });
+}
 
-// // progress-line mouse
-// function updatePercentPosition() {
-//   percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
-//   progressLine.style.left = percentPositionFromWidth + "%";
-// }
+// progress-line mouse
+function updatePercentPosition() {
+  percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
+  progressLine.style.left = percentPositionFromWidth + "%";
+}
 
 // animation-number
 const animationNumberSection = document.querySelector(".animation-number");
@@ -189,32 +189,3 @@ dropDownAnswers.forEach((answer) => {
 
 // -------------------------------------------------------
 
-let flag = false;
-let firstClickX = 0;
-let firstClickY = 0;
-let lastClickX = 0;
-let diffX = 0;
-
-let currentPosition = 0;
-
-//
-sliderLine.addEventListener("pointerdown", (e) => {
-  flag = true;
-  firstClickX = e.clientX - sliderLine.getBoundingClientRect().left;
-  firstClickY = e.clientY - sliderLine.getBoundingClientRect().top;
-  sliderLine.style.left = currentPosition + "px";
-});
-sliderLine.addEventListener("pointerup", (e) => {
-  flag = false;
-  currentPosition += diffX;
-});
-
-sliderLine.addEventListener("pointermove", (e) => {
-  if (!flag) return;
-  e.preventDefault();
-  lastClickX = e.clientX - sliderLine.getBoundingClientRect().left;
-  diffX = lastClickX - firstClickX;
-
-  sliderLine.style.left = currentPosition + diffX * 2 + "px";
-  console.log(currentPosition, diffX);
-});
