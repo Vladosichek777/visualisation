@@ -198,18 +198,18 @@ let diffX = 0;
 let currentPosition = 0;
 
 //
-sliderLine.addEventListener("mousedown", (e) => {
+sliderLine.addEventListener("pointerdown", (e) => {
   flag = true;
   firstClickX = e.clientX - sliderLine.getBoundingClientRect().left;
   firstClickY = e.clientY - sliderLine.getBoundingClientRect().top;
   sliderLine.style.left = currentPosition + "px";
 });
-sliderLine.addEventListener("mouseup", (e) => {
+sliderLine.addEventListener("pointerup", (e) => {
   flag = false;
   currentPosition += diffX;
 });
 
-sliderLine.addEventListener("mousemove", (e) => {
+sliderLine.addEventListener("pointermove", (e) => {
   if (!flag) return;
   e.preventDefault();
   lastClickX = e.clientX - sliderLine.getBoundingClientRect().left;
