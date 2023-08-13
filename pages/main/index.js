@@ -1,6 +1,5 @@
 let textsBlockSpan = {
-  sales50:
-    "Размер скидки зависит от объема проекта и устанавливается индивидуально при расчете коммерческого предложения",
+  sales50: "Размер скидки зависит от объема проекта и устанавливается индивидуально при расчете коммерческого предложения",
   salesForFuture: "На второй и последующие заказы вы получите дополнительную скидку 5%.",
   time: "Срок исполнения зависит от сложности задачи, размера проекта и рассчитывается индивидуально",
 };
@@ -8,6 +7,7 @@ const blockSpan = document.querySelectorAll("[data-text]");
 let div = document.createElement("div");
 document.body.append(div);
 div.classList.add("block-span--window");
+
 for (let block of blockSpan) {
   block.addEventListener("mouseover", (e) => {
     for (let key in textsBlockSpan) {
@@ -32,93 +32,92 @@ for (let block of blockSpan) {
 }
 
 const sliderLine = document.querySelector(".slider-line");
-let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
-// const arrImages = Array.from(sliderLine.children);
-const arrImages = document.querySelectorAll(".slider-line > picture > img");
-const progressArrowNext = document.querySelector(".progress-line__arrow-next");
-const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
-let progressLine = document.querySelector(".progress-line__mouse");
+// let sliderMarginLeft = sliderLine.getBoundingClientRect().left;
+// const arrImages = document.querySelectorAll(".slider-line > picture > img");
+// const progressArrowNext = document.querySelector(".progress-line__arrow-next");
+// const progressArrowPrev = document.querySelector(".progress-line__arrow-prev");
+// let progressLine = document.querySelector(".progress-line__mouse");
 
-for (let i = 0; i < arrImages.length; i++) {
-  arrImages[i].id = i;
-}
+// for (let i = 0; i < arrImages.length; i++) {
+//   arrImages[i].id = i;
+// }
+// function slideImageNext() {
+//   position -= coordsNextImage;
+//   sliderLine.style.left = position + "px";
+//   ++currentIdImage;
+//   updatePercentPosition();
+// }
 
-let position = 0;
-let percentPositionFromWidth = 0;
-let currentIdImage;
-let coordsNextImage;
-for (let image of arrImages) {
-  if (image.getBoundingClientRect().left - sliderMarginLeft === 0) {
-    currentIdImage = +image.id;
-  }
-}
-let isClickPending = false;
-progressArrowNext.addEventListener("click", () => {
-  if (isClickPending) {
-    return;
-  } else {
-    isClickPending = true;
-    if (currentIdImage >= arrImages.length - 1) {
-      isClickPending = false;
-      return;
-    } else {
-      coordsNextImage =
-        document.getElementById(currentIdImage + 1).getBoundingClientRect().left - sliderMarginLeft;
-      position -= coordsNextImage;
-      sliderLine.style.left = position + "px";
-      ++currentIdImage;
-      updatePercentPosition();
-    }
-    setTimeout(() => {
-      isClickPending = false;
-    }, 600);
-  }
-});
+// let position = 0;
+// let percentPositionFromWidth = 0;
+// let currentIdImage;
+// let coordsNextImage;
+// for (let image of arrImages) {
+//   if (image.getBoundingClientRect().left - sliderMarginLeft === 0) {
+//     currentIdImage = +image.id;
+//   }
+// }
 
-progressArrowPrev.addEventListener("click", () => {
-  if (isClickPending) {
-    return;
-  } else {
-    isClickPending = true;
-    if (currentIdImage === 0) {
-      isClickPending = false;
-      return;
-    } else {
-      position += coordsNextImage;
-      sliderLine.style.left = position + "px";
-      --currentIdImage;
-      updatePercentPosition();
-    }
+// let isClickPending = false;
+// progressArrowNext.addEventListener("click", () => {
+//   if (isClickPending) {
+//     return;
+//   } else {
+//     isClickPending = true;
+//     if (currentIdImage >= arrImages.length - 1) {
+//       isClickPending = false;
+//       return;
+//     } else {
+//       coordsNextImage = document.getElementById(currentIdImage + 1).getBoundingClientRect().left - sliderMarginLeft;
+//       slideImageNext();
+//     }
+//     setTimeout(() => {
+//       isClickPending = false;
+//     }, 600);
+//   }
+// });
 
-    setTimeout(() => {
-      isClickPending = false;
-    }, 600);
-  }
-});
+// progressArrowPrev.addEventListener("click", () => {
+//   if (isClickPending) {
+//     return;
+//   } else {
+//     isClickPending = true;
+//     if (currentIdImage === 0) {
+//       isClickPending = false;
+//       return;
+//     } else {
+//       position += coordsNextImage;
+//       sliderLine.style.left = position + "px";
+//       --currentIdImage;
+//       updatePercentPosition();
+//     }
 
-for (let image of arrImages) {
-  image.addEventListener("click", () => {
-    if (isClickPending) {
-      return;
-    } else {
-      isClickPending = true;
-      coordsNextImage = Math.round(image.getBoundingClientRect().left - sliderMarginLeft);
-      position -= coordsNextImage;
-      sliderLine.style.left = position + "px";
-      ++currentIdImage;
-      updatePercentPosition();
-      setTimeout(() => {
-        isClickPending = false;
-      }, 300);
-    }
-  });
-}
+//     setTimeout(() => {
+//       isClickPending = false;
+//     }, 600);
+//   }
+// });
 
-// progress-line mouse
-function updatePercentPosition() {
-  percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
-  progressLine.style.left = percentPositionFromWidth + "%";
-}
+// for (let image of arrImages) {
+//   image.addEventListener("click", () => {
+//     if (isClickPending) {
+//       return;
+//     } else {
+//       isClickPending = true;
+//       coordsNextImage = Math.round(image.getBoundingClientRect().left - sliderMarginLeft);
+//       slideImageNext();
+//     }
+//     setTimeout(() => {
+//       isClickPending = false;
+//     }, 300);
+//   });
+// }
+
+// // progress-line mouse
+// function updatePercentPosition() {
+//   percentPositionFromWidth = Math.round((-position / sliderLine.offsetWidth) * 100);
+//   progressLine.style.left = percentPositionFromWidth + "%";
+// }
 
 // animation-number
 const animationNumberSection = document.querySelector(".animation-number");
@@ -174,16 +173,48 @@ nestedListQuestions.forEach((item) => {
   });
 });
 dropDownAnswers.forEach((answer) => {
-  answer.addEventListener("click", () => {
-    if (!answer.classList.contains("dropdown-answer--hidden")) {
+  answer.addEventListener("click", function () {
+    if (!this.classList.contains("dropdown-answer--hidden")) {
       return;
     } else {
       dropDownAnswers.forEach((answer2) => {
         answer2.classList.add("dropdown-answer--hidden");
         answer2.classList.remove("dropdown-answer--title-active");
       });
-      answer.classList.remove("dropdown-answer--hidden");
-      answer.classList.add("dropdown-answer--title-active");
+      this.classList.remove("dropdown-answer--hidden");
+      this.classList.add("dropdown-answer--title-active");
     }
   });
+});
+
+// -------------------------------------------------------
+
+let flag = false;
+let firstClickX = 0;
+let firstClickY = 0;
+let lastClickX = 0;
+let diffX = 0;
+
+let currentPosition = 0;
+
+//
+sliderLine.addEventListener("mousedown", (e) => {
+  flag = true;
+  firstClickX = e.clientX - sliderLine.getBoundingClientRect().left;
+  firstClickY = e.clientY - sliderLine.getBoundingClientRect().top;
+  sliderLine.style.left = currentPosition + "px";
+});
+sliderLine.addEventListener("mouseup", (e) => {
+  flag = false;
+  currentPosition += diffX;
+});
+
+sliderLine.addEventListener("mousemove", (e) => {
+  if (!flag) return;
+  e.preventDefault();
+  lastClickX = e.clientX - sliderLine.getBoundingClientRect().left;
+  diffX = lastClickX - firstClickX;
+
+  sliderLine.style.left = currentPosition + diffX * 2 + "px";
+  console.log(currentPosition, diffX);
 });
