@@ -50,7 +50,6 @@
   padding-top: 50px;
   border-left: 2px solid #9da0a35c;
   &-item {
-    width: 100%;
     &__title {
       @include titleh2;
       font-size: 35px;
@@ -66,9 +65,39 @@
     }
   }
 }
-
+@media (max-width: 1699px) {
+  .nested-lists-answers {
+    &-item {
+      &__button {
+        margin: 0 auto;
+      }
+      &--padding {
+        padding: 52px 50px 63px 50px;
+      }
+    }
+  }
+}
 @media (max-width: 1000px) {
   .nested-lists-wrapper {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .nested-lists-answers {
+    &-item {
+      &--padding {
+        padding: 19px 20px 37px;
+      }
+
+      &__title {
+        text-align: center;
+        margin-bottom: 18px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 20px; /* 100% */
+        letter-spacing: 0.2px;
+      }
+    }
   }
 }

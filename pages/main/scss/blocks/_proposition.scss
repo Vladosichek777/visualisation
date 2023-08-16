@@ -6,5 +6,10 @@
   &--dark {
     background-color: $background-first;
   }
-  
+}
+
+@media (max-width: 1700px) {
+  .proposition-item {
+    flex-direction: column;
+  }
 }

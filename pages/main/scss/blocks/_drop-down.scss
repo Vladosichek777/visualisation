@@ -188,3 +188,35 @@
     }
   }
 }
+
+@media (max-width: 850px) {
+  .dropdown-answer-complex {
+    &__gadgets {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .dropdown-answer {
+    margin-bottom: 28px;
+    border-bottom: 1px solid #9da0a36e;
+    &__title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 21px; /* 161.538% */
+    }
+    &-complex {
+      &__first,
+      &__second {
+        font-size: 12px;
+        line-height: 18px; /* 150% */
+        letter-spacing: 0.12px;
+      }
+
+      &__second {
+        padding-left: 20px;
+      }
+    }
+  }
+}
