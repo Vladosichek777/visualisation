@@ -1,0 +1,31 @@
+<svg width="193" height="62" viewBox="0 0 193 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 490">
+<rect id="Rectangle 337" x="96.3396" width="96.3396" height="61.1497" fill="black"/>
+<rect id="Rectangle 338" width="96.3396" height="61.1497" fill="black"/>
+<g id="Rectangle 340">
+<rect x="4.03809" y="1.73071" width="92.3014" height="57.6884" fill="#E4E4E4"/>
+<rect x="4.03809" y="1.73071" width="92.3014" height="57.6884" fill="url(#paint0_linear_92_591)" fill-opacity="0.3"/>
+</g>
+<g id="Rectangle 342">
+<rect width="92.3014" height="57.6884" transform="matrix(-1 0 0 1 189.218 1.73071)" fill="white"/>
+<rect width="92.3014" height="57.6884" transform="matrix(-1 0 0 1 189.218 1.73071)" fill="url(#paint1_linear_92_591)" fill-opacity="0.3"/>
+</g>
+<line id="Line 279" x1="1.65381" y1="1.73071" x2="1.65381" y2="59.4191" stroke="#9C9C9C"/>
+<line id="Line 282" x1="2.80762" y1="1.73071" x2="2.80761" y2="59.4191" stroke="#9C9C9C"/>
+<line id="Line 280" x1="190.295" y1="1.73071" x2="190.295" y2="59.4191" stroke="#9C9C9C"/>
+<line id="Line 281" x1="191.449" y1="1.73071" x2="191.449" y2="59.4191" stroke="#9C9C9C"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_92_591" x1="4.03809" y1="30.5749" x2="105.57" y2="30.5749" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.587407" stop-color="#E4E4E4" stop-opacity="0.79"/>
+<stop offset="0.674338" stop-color="#C7C7C7" stop-opacity="0.74"/>
+<stop offset="0.914678"/>
+</linearGradient>
+<linearGradient id="paint1_linear_92_591" x1="0" y1="28.8442" x2="101.532" y2="28.8442" gradientUnits="userSpaceOnUse">
+<stop offset="0.126419"/>
+<stop offset="0.532107" stop-color="white" stop-opacity="0.17"/>
+<stop offset="0.887084"/>
+</linearGradient>
+</defs>
+</svg>

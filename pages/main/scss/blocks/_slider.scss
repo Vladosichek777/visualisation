@@ -1,15 +1,29 @@
 .slider {
   height: 517px;
-  min-width: 100000px;
+  //min-width: 100000px;
+  max-width: 870px;
   position: relative;
 
-  overflow-x: hidden;
-  position: relative;
+  //overflow-x: hidden;
+  //position: relative;
   &-line {
-    position: absolute;
-    left: 0px;
+    // position: absolute;
+    // left: 0px;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
     font-size: 0;
     height: 100%;
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgb(66, 62, 54);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: antiquewhite;
+      border-radius: 10px;
+    }
     transition: all 0.5s;
     img {
       border-radius: 10px;
@@ -17,6 +31,12 @@
       width: 870px;
       margin-right: 20px;
     }
+  }
+
+  &--temporary {
+    width: 859px;
+    height: 1104px;
+    margin-right: 90px;
   }
 }
 

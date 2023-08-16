@@ -1,0 +1,10 @@
+.proposition-item {
+  display: flex;
+  &--light {
+    background-color: $background-second;
+  }
+  &--dark {
+    background-color: $background-first;
+  }
+  
+}
