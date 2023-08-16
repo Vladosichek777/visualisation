@@ -65,10 +65,13 @@ $text-color: #000;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000000;
   opacity: 1;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  display: none;
+
+  &--active {
+    display: flex;
+  }
   .pop-up {
     max-width: 52.083333%; /* 1000/1920 */
     max-height: 80vh;
@@ -111,8 +114,7 @@ $text-color: #000;
       margin-top: 2.717391%; /* 30/1104 */
     }
 
-    &::after {
-      content: url(../../../assets/icons/close.svg);
+    &__close {
       position: absolute;
       top: 0px;
       right: -50px;

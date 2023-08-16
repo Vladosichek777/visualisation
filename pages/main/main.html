@@ -344,7 +344,7 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="first" class="dropdown-answer-complex__pop-up">Посмотреть состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -376,7 +376,7 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="first" class="dropdown-answer-complex__pop-up">Посмотреть состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -418,7 +418,8 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="second" class="dropdown-answer-complex__pop-up">Посмотреть
+                                            состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -451,7 +452,8 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="second" class="dropdown-answer-complex__pop-up">Посмотреть
+                                            состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -493,7 +495,7 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="third" class="dropdown-answer-complex__pop-up">Посмотреть состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -525,7 +527,7 @@
                                         объектов комплексной застройки от 1 га на основе проектной документации,
                                         чертежей или BIM-модели.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="third" class="dropdown-answer-complex__pop-up">Посмотреть состав
                                             технического задания.</span>
                                         Вы получите 4-6 перспективных изображений от 1800px до 3840px по
                                         длинной стороне.
@@ -567,7 +569,8 @@
                                         целью привлечения клиентов к камому-либо продукту промышленного или
                                         индивидуального производства.</p>
                                     <p class="dropdown-answer-complex__second">Стоимость зависит от сложности ТЗ.
-                                        <span class="dropdown-answer-complex__pop-up">Посмотреть состав
+                                        <span data-pop="fourth" class="dropdown-answer-complex__pop-up">Посмотреть
+                                            состав
                                             технического задания.</span>
                                     </p>
                                     <div class="dropdown-answer-complex__gadgets">
@@ -595,7 +598,7 @@
         </section>
     </main>
     <div class="pop-up-wrap">
-        <div class="pop-up" hidden>
+        <div class="pop-up" data-pop="first" hidden>
             <p class="pop-up__title">состав технического задания</p>
             <p class="pop-up__subtitle">для визуализации комплексной застройки</p>
             <p class="pop-up__fitback">Все материалы необходимо выслать на электронный адрес <a
@@ -620,8 +623,9 @@
             </ul>
 
             <p class="pop-up__bottom">Предпочтительный формат предоставляемых материалов: AutoCAD или Revit.</p>
+            <img class="pop-up__close" src="../../assets/icons/close.svg" alt="close">
         </div>
-        <div class="pop-up" hidden>
+        <div class="pop-up" data-pop="third" hidden>
             <p class="pop-up__title">состав технического задания</p>
             <p class="pop-up__subtitle">для интерьерной визуализации</p>
             <p class="pop-up__fitback">Все материалы необходимо выслать на электронный адрес <a
@@ -645,8 +649,9 @@
                     оформления</li>
             </ul>
             <p class="pop-up__bottom">Предпочтительный формат предоставляемых материалов: AutoCAD или Revit.</p>
+            <img class="pop-up__close" src="../../assets/icons/close.svg" alt="close">
         </div>
-        <div class="pop-up" hidden>
+        <div class="pop-up" data-pop="fourth" hidden>
             <p class="pop-up__title">состав технического задания</p>
             <p class="pop-up__subtitle">для рекламной визуализации мебели, предметов декора, освещения</p>
             <p class="pop-up__fitback">Все материалы необходимо выслать на электронный адрес <a
@@ -664,28 +669,9 @@
                     требованиями к проекту</li>
             </ul>
             <p class="pop-up__bottom">Предпочтительный формат предоставляемых материалов: AutoCAD или Revit.</p>
+            <img class="pop-up__close" src="../../assets/icons/close.svg" alt="close">
         </div>
-        <div class="pop-up" hidden>
-            <p class="pop-up__title">состав технического задания</p>
-            <p class="pop-up__subtitle">для рекламной визуализации интерьеров</p>
-            <p class="pop-up__fitback">Все материалы необходимо выслать на электронный адрес <a
-                    href="majto:project@bimpro.ru">project@bimpro.ru</a></p>
-            <ul class="pop-up__list">
-                <li class="pop-up__list-item pop-up__list-item--title"> Техническое задание на рекламную визуализацию
-                    интерьеров должно включать следующие документы и чертежи:</li>
-                <li class="pop-up__list-item">Обмерный план помещения</li>
-                <li class="pop-up__list-item">План помещния с расстановкой мебели </li>
-                <li class="pop-up__list-item">Существующие чертежи по проекту (те, которые были разработаны)</li>
-                <li class="pop-up__list-item">Основные высоты помещения (высота потолка, дверных проемов, высота до
-                    подоконников, высота окон и т.д.) </li>
-                <li class="pop-up__list-item">Фотографии и изображения интерьеров похожей стилистики, настроения или
-                    оформления</li>
-                <li class="pop-up__list-item">Точное текстовое описание задания для визуализатора с комментариями и
-                    требованиями к проекту</li>
-            </ul>
-            <p class="pop-up__bottom">Предпочтительный формат предоставляемых материалов: AutoCAD или Revit.</p>
-        </div>
-        <div class="pop-up" hidden>
+        <div class="pop-up" data-pop="second" hidden>
             <p class="pop-up__title">состав технического задания</p>
             <p class="pop-up__subtitle">для архитектурной визуализации</p>
             <p class="pop-up__fitback">Все материалы необходимо выслать на электронный адрес <a
@@ -709,6 +695,7 @@
                 <li class="pop-up__list-item">Точное текстовое описание задания для визуализатора</li>
             </ul>
             <p class="pop-up__bottom">Предпочтительный формат предоставляемых материалов: AutoCAD или Revit.</p>
+            <img class="pop-up__close" src="../../assets/icons/close.svg" alt="close">
         </div>
     </div>
     <footer class="footer"></footer>

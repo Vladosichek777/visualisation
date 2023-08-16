@@ -21,7 +21,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   box-sizing: content-box;
-  overflow-x: hidden;
+  overflow: hidden;
   &--animation-number {
     max-width: 1920px;
     padding: 0;
@@ -50,7 +50,7 @@ body {
 @media (max-width: 1750px) {
   .container {
     &--animation-number {
-      max-width: 1366px;
+      // max-width: 1366px;
       padding-left: 30px;
       padding-right: 30px;
       box-sizing: content-box;

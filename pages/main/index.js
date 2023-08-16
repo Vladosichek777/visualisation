@@ -187,3 +187,31 @@ dropDownAnswers.forEach((answer) => {
   });
 });
 
+// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP
+
+const spanPopUp = document.querySelectorAll(".dropdown-answer-complex__pop-up");
+const popUpBack = document.querySelector(".pop-up-wrap");
+const arrPopUp = document.querySelectorAll(".pop-up");
+const closePopUp = document.querySelectorAll(".pop-up__close");
+
+spanPopUp.forEach((span) => {
+  span.addEventListener("click", function () {
+    for (let popUp of arrPopUp) {
+      if (span.dataset.pop === popUp.dataset.pop) {
+        popUpBack.classList.add("pop-up-wrap--active");
+        popUp.hidden = "";
+      }
+    }
+  });
+});
+
+closePopUp.forEach((close) => {
+  close.addEventListener("click", () => {
+    popUpBack.classList.remove("pop-up-wrap--active");
+    for (let popUp of arrPopUp) {
+      if (!popUp.hasAttribute("hidden")) {
+        popUp.hidden = true;
+      }
+    }
+  });
+});

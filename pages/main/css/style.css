@@ -333,7 +333,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   box-sizing: content-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .container--animation-number {
   max-width: 1920px;
@@ -358,7 +358,6 @@ body {
 }
 @media (max-width: 1750px) {
   .container--animation-number {
-    max-width: 1366px;
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: content-box;
@@ -1390,10 +1389,12 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000000;
   opacity: 1;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  display: none;
+}
+.pop-up-wrap--active {
+  display: flex;
 }
 .pop-up-wrap .pop-up {
   max-width: 52.083333%; /* 1000/1920 */
@@ -1479,8 +1480,7 @@ body {
   margin-block-end: 0em;
   margin-top: 2.717391%; /* 30/1104 */
 }
-.pop-up-wrap .pop-up::after {
-  content: url(../../../assets/icons/close.svg);
+.pop-up-wrap .pop-up__close {
   position: absolute;
   top: 0px;
   right: -50px;
