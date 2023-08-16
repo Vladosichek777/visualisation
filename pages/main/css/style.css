@@ -839,6 +839,51 @@ body {
   top: 16px;
   left: 25px;
 }
+.dropdown-answer-complex__notebook--second-first img {
+  width: 250px;
+}
+.dropdown-answer-complex__notebook--second-first::after {
+  content: url(../../../assets/images/proposition/architecture--second/notebook-desctop.png);
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
+.dropdown-answer-complex__notebook--second-second img {
+  width: 250px;
+}
+.dropdown-answer-complex__notebook--second-second::after {
+  content: url(../../../assets/images/proposition/architecture--second/notebook-desctop.png);
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
+.dropdown-answer-complex__notebook--third-first img {
+  width: 250px;
+}
+.dropdown-answer-complex__notebook--third-first::after {
+  content: url(../../../assets/images/proposition/interiers-first/notebook.png);
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
+.dropdown-answer-complex__notebook--third-second img {
+  width: 250px;
+}
+.dropdown-answer-complex__notebook--third-second::after {
+  content: url(../../../assets/images/proposition/interiers-second/notebook.png);
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
+.dropdown-answer-complex__notebook--fourth-first img {
+  width: 250px;
+}
+.dropdown-answer-complex__notebook--fourth-first::after {
+  content: url(../../../assets/images/proposition/advirt/notebook.png);
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
 .dropdown-answer-complex__desctop {
   position: relative;
 }
@@ -866,6 +911,66 @@ body {
   top: 14px;
   right: 4px;
 }
+.dropdown-answer-complex__desctop--second-first img {
+  width: 210px;
+}
+.dropdown-answer-complex__desctop--second-first::after {
+  content: url(../../../assets/images/proposition/architecture--second/notebook-desctop.png);
+  position: absolute;
+  top: 13px;
+  right: 6px;
+}
+.dropdown-answer-complex__desctop--second-first::before {
+  content: url(../../../assets/images/proposition/complex-visual-gadgets--first/big-desctop-background.png);
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+.dropdown-answer-complex__desctop--second-second img {
+  width: 210px;
+}
+.dropdown-answer-complex__desctop--second-second::before {
+  content: url(../../../assets/images/proposition/complex-visual-gadgets--first/big-desctop-background.png);
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+.dropdown-answer-complex__desctop--second-second::after {
+  content: url(../../../assets/images/proposition/complex-visual-gadgets--second/big-desctop.png);
+  position: absolute;
+  top: 14px;
+  right: 4px;
+}
+.dropdown-answer-complex__desctop--third-first img {
+  width: 210px;
+}
+.dropdown-answer-complex__desctop--third-first::after {
+  content: url(../../../assets/images/proposition/interiers-first/notebook.png);
+  position: absolute;
+  top: 20px;
+  right: 12px;
+}
+.dropdown-answer-complex__desctop--third-first::before {
+  content: url(../../../assets/images/proposition/complex-visual-gadgets--first/big-desctop-background.png);
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+.dropdown-answer-complex__desctop--third-second img {
+  width: 210px;
+}
+.dropdown-answer-complex__desctop--third-second::before {
+  content: url(../../../assets/images/proposition/complex-visual-gadgets--first/big-desctop-background.png);
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+.dropdown-answer-complex__desctop--third-second::after {
+  content: url(../../../assets/images/proposition/interiers-second/desctop.png);
+  position: absolute;
+  top: 14px;
+  right: 4px;
+}
 .dropdown-answer-complex__book {
   position: relative;
 }
@@ -886,6 +991,66 @@ body {
   position: absolute;
   top: 3px;
   right: 2px;
+}
+.dropdown-answer-complex__book--second-first img {
+  width: 262px;
+}
+.dropdown-answer-complex__book--second-first::after {
+  content: url(../../../assets/images/proposition/architecture--second/book.png);
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.dropdown-answer-complex__book--second-second img {
+  width: 262px;
+}
+.dropdown-answer-complex__book--second-second::after {
+  content: url(../../../assets/images/proposition/architecture--second/book.png);
+  position: absolute;
+  top: 3px;
+  right: 2px;
+}
+.dropdown-answer-complex__book--third-first img {
+  width: 262px;
+}
+.dropdown-answer-complex__book--third-first::after {
+  content: url(../../../assets/images/proposition/interiers-first/book.png);
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.dropdown-answer-complex__book--third-second img {
+  width: 262px;
+}
+.dropdown-answer-complex__book--third-second::after {
+  content: url(../../../assets/images/proposition/interiers-second/book.png);
+  position: absolute;
+  top: 3px;
+  right: 2px;
+}
+.dropdown-answer-complex__book--fourth-first img {
+  width: 262px;
+}
+.dropdown-answer-complex__book--fourth-first::after {
+  content: url(../../../assets/images/proposition/advirt/book.png);
+  position: absolute;
+  top: 2px;
+  right: 6px;
+}
+.dropdown-answer-complex__stends {
+  position: relative;
+}
+.dropdown-answer-complex__stends--fourth-first {
+  margin-right: 20px;
+}
+.dropdown-answer-complex__stends--fourth-first img {
+  width: 120px;
+}
+.dropdown-answer-complex__stends--fourth-first::after {
+  content: url(../../../assets/images/proposition/advirt/stends.png);
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 @media (max-width: 850px) {
