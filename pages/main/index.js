@@ -191,7 +191,7 @@ dropDownAnswers.forEach((answer) => {
 
 const spanPopUp = document.querySelectorAll(".dropdown-answer-complex__pop-up");
 const popUpBack = document.querySelector(".pop-up-wrap");
-const arrPopUp = document.querySelectorAll(".pop-up");
+const arrPopUp = document.querySelectorAll(".pop-up__close-wrap");
 const closePopUp = document.querySelectorAll(".pop-up__close");
 
 spanPopUp.forEach((span) => {
