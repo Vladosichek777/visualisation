@@ -76,10 +76,14 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
 
     arrImagesSlider.forEach((image) => {
       image.addEventListener("pointerdown", (e) => {
-        e.preventDefault();
-        startX = e.pageX;
-        startY = e.pageY;
-        startDate = new Date();
+        if (isEnable) {
+          isEnable = false;
+          e.preventDefault();
+          startX = e.pageX;
+          startY = e.pageY;
+          startDate = new Date();
+          isEnable = true;
+        }
       });
       image.addEventListener("pointerup", (e) => {
         finishX = e.pageX;
