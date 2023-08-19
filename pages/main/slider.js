@@ -85,7 +85,6 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
         }
       });
       image.addEventListener("pointerup", (e) => {
-        
         finishX = e.pageX;
         finishY = e.pageY;
         diffDistanceY = Math.abs(startY - finishY);
@@ -100,15 +99,15 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
           diffDate <= maxTimeTouch
         ) {
           showNextImage();
-        }
-
-        if (
+        } else if (
           diffDistanceX < 0 &&
           Math.abs(diffDistanceX) >= minDistanceTouchX &&
           diffDistanceY <= maxDifferenceDistanceY &&
           diffDate <= maxTimeTouch
         ) {
           showPrevImage();
+        } else {
+          isEnable = true;
         }
       });
     });

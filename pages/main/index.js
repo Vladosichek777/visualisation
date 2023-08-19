@@ -5,8 +5,11 @@ import initialSlider from "./slider.js";
 //Slider
 const buttonNext = document.querySelector(".progress-line__arrow-next");
 const buttonPrev = document.querySelector(".progress-line__arrow-prev");
-const arrImagesSlider = document.querySelectorAll(".slider__item");
+const arrImagesSlider = document.querySelectorAll(`.slider__item[data-slider='intro']`);
 initialSlider(buttonNext, buttonPrev, arrImagesSlider);
+
+//Slider proposition
+
 
 //CREATE HELPER TEXT FOR BLOCK SPAN and gadgets
 const textsBlockSpan = {

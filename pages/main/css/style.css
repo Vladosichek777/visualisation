@@ -566,10 +566,9 @@ body {
   display: block;
 }
 .slider--temporary {
-  min-width: 859px;
+  width: 859px;
   height: 1104px;
   margin-right: 90px;
-  background-color: aqua;
 }
 
 .to-left {
