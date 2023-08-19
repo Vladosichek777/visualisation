@@ -6,10 +6,17 @@ import initialSlider from "./slider.js";
 const buttonNext = document.querySelector(".progress-line__arrow-next");
 const buttonPrev = document.querySelector(".progress-line__arrow-prev");
 const arrImagesSlider = document.querySelectorAll(`.slider__item[data-slider='intro']`);
-initialSlider(buttonNext, buttonPrev, arrImagesSlider);
+initialSlider(arrImagesSlider, buttonNext, buttonPrev);
 
 //Slider proposition
-
+const arrImagesProposition1 = document.querySelectorAll(`.slider__item[data-slider='proposition1']`);
+const arrImagesProposition2 = document.querySelectorAll(`.slider__item[data-slider='proposition2']`);
+const arrImagesProposition3 = document.querySelectorAll(`.slider__item[data-slider='proposition3']`);
+const arrImagesProposition4 = document.querySelectorAll(`.slider__item[data-slider='proposition4']`);
+initialSlider(arrImagesProposition1);
+initialSlider(arrImagesProposition2);
+initialSlider(arrImagesProposition3);
+initialSlider(arrImagesProposition4);
 
 //CREATE HELPER TEXT FOR BLOCK SPAN and gadgets
 const textsBlockSpan = {

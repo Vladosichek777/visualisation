@@ -1,4 +1,4 @@
-function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
+function initialSlider(arrImagesSlider, buttonNext, buttonPrev) {
   let currentIndex = 0;
   let isEnable = true;
 
@@ -44,19 +44,27 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
     clearClassPrev(currentIndex, prevIndex);
   }
 
-  buttonNext.addEventListener("click", () => {
-    if (isEnable) {
-      isEnable = false;
-      showNextImage();
-    }
-  });
+  if (!buttonNext) {
+    touchChangeImage(arrImagesSlider);
+  } else {
+    buttonNext.addEventListener("click", () => {
+      if (isEnable) {
+        isEnable = false;
+        showNextImage();
+      }
+    });
+  }
 
-  buttonPrev.addEventListener("click", () => {
-    if (isEnable) {
-      isEnable = false;
-      showPrevImage();
-    }
-  });
+  if (!buttonPrev) {
+    touchChangeImage(arrImagesSlider);
+  } else {
+    buttonPrev.addEventListener("click", () => {
+      if (isEnable) {
+        isEnable = false;
+        showPrevImage();
+      }
+    });
+  }
 
   function touchChangeImage(arrImagesSlider) {
     const maxTimeTouch = 1000;
