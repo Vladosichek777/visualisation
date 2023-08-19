@@ -76,38 +76,39 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
 
     arrImagesSlider.forEach((image) => {
       image.addEventListener("pointerdown", (e) => {
-        e.preventDefault();
-        startX = e.pageX;
-        startY = e.pageY;
-        startDate = new Date();
-      });
-      image.addEventListener("pointerup", (e) => {
         if (isEnable) {
           isEnable = false;
-          finishX = e.pageX;
-          finishY = e.pageY;
-          diffDistanceY = Math.abs(startY - finishY);
-          finishDate = new Date();
-          diffDistanceX = startX - finishX;
-          diffDate = finishDate - startDate;
+          e.preventDefault();
+          startX = e.pageX;
+          startY = e.pageY;
+          startDate = new Date();
+        }
+      });
+      image.addEventListener("pointerup", (e) => {
+        isEnable = false;
+        finishX = e.pageX;
+        finishY = e.pageY;
+        diffDistanceY = Math.abs(startY - finishY);
+        finishDate = new Date();
+        diffDistanceX = startX - finishX;
+        diffDate = finishDate - startDate;
 
-          if (
-            diffDistanceX > 0 &&
-            diffDistanceX >= minDistanceTouchX &&
-            diffDistanceY <= maxDifferenceDistanceY &&
-            diffDate <= maxTimeTouch
-          ) {
-            showNextImage();
-          }
+        if (
+          diffDistanceX > 0 &&
+          diffDistanceX >= minDistanceTouchX &&
+          diffDistanceY <= maxDifferenceDistanceY &&
+          diffDate <= maxTimeTouch
+        ) {
+          showNextImage();
+        }
 
-          if (
-            diffDistanceX < 0 &&
-            Math.abs(diffDistanceX) >= minDistanceTouchX &&
-            diffDistanceY <= maxDifferenceDistanceY &&
-            diffDate <= maxTimeTouch
-          ) {
-            showPrevImage();
-          }
+        if (
+          diffDistanceX < 0 &&
+          Math.abs(diffDistanceX) >= minDistanceTouchX &&
+          diffDistanceY <= maxDifferenceDistanceY &&
+          diffDate <= maxTimeTouch
+        ) {
+          showPrevImage();
         }
       });
     });
