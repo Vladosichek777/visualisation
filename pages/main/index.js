@@ -57,13 +57,16 @@ function iniziateShowPopUp() {
   function showPopUp(popUp, popUpBack) {
     popUpBack.classList.add("pop-up-wrap--active");
     popUp.hidden = "";
+    document.body.classList.add("hidden");
   }
   function closePopUp(popUp, popUpBack) {
     popUp.querySelector(".pop-up__close").addEventListener("click", () => {
       popUpBack.classList.remove("pop-up-wrap--active");
       popUp.hidden = true;
+      document.body.classList.remove("hidden");
     });
   }
+
   spanPopUp.forEach((span) => {
     span.addEventListener("click", function () {
       const popUpBack = document.querySelector(".pop-up-wrap");

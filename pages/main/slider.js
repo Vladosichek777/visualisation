@@ -85,6 +85,7 @@ function initialSlider(buttonNext, buttonPrev, arrImagesSlider) {
         }
       });
       image.addEventListener("pointerup", (e) => {
+        
         finishX = e.pageX;
         finishY = e.pageY;
         diffDistanceY = Math.abs(startY - finishY);

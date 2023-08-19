@@ -315,7 +315,6 @@ html {
   margin: 0;
   font-size: 18px;
   font-family: Roboto, Bebas Neue, sans-serif;
-  overflow-x: hidden;
 }
 
 body {
@@ -324,6 +323,10 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 .container {
@@ -1527,7 +1530,7 @@ body {
 
 @media (max-width: 900px) {
   .pop-up-wrap .pop-up__close {
-    top: 5%;
+    top: -2%;
     right: 5%;
   }
   .pop-up-wrap .pop-up__close-wrap {

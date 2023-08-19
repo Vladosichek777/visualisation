@@ -3,7 +3,7 @@ html {
   margin: 0;
   font-size: 18px;
   font-family: Roboto, Bebas Neue, sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 .container {
