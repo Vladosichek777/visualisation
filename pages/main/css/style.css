@@ -571,26 +571,26 @@ body {
 
 .to-left {
   animation-name: left;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 .to-right {
   animation-name: right;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 .from-left {
   animation-name: form-left;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 .from-right {
   animation-name: form-right;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 @keyframes left {
