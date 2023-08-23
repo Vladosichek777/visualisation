@@ -50,6 +50,22 @@
       border: 2px solid $main-color;
     }
   }
+
+  &--tags {
+    margin-bottom: 26px;
+    padding: 8px 50px;
+
+    &:hover {
+      background-color: inherit;
+      border-color: $main-color;
+      color: $main-color;
+    }
+    &-active {
+      background-color: $main-color;
+      color: #fff;
+      border-color: $main-color;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -65,6 +81,23 @@
     &--intro {
       margin: 0 auto;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .button--tags {
+    margin-right: 11px;
+  }
+}
+@media (max-width: 650px) {
+  .button--tags {
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.24px;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }
 
