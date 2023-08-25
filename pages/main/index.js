@@ -1,6 +1,7 @@
 import createHelperText from "./helper-text.js";
 import initializeNestedLists from "./nested-list.js";
 import initialSlider from "./slider.js";
+import iniziateShowPopUp from "./pop-up.js";
 import searchTags from "./finished-projects.js";
 
 //Slider
@@ -62,42 +63,11 @@ observer.observe(runNumber);
 initializeNestedLists();
 // POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP
 
-function iniziateShowPopUp() {
-  const spanPopUp = document.querySelectorAll(".dropdown-answer-complex__pop-up");
-
-  function showPopUp(popUp, popUpBack) {
-    popUpBack.classList.add("pop-up-wrap--active");
-    popUp.hidden = "";
-    document.body.classList.add("hidden");
-  }
-  function closePopUp(popUp, popUpBack) {
-    popUp.querySelector(".pop-up__close").addEventListener("click", () => {
-      popUpBack.classList.remove("pop-up-wrap--active");
-      popUp.hidden = true;
-      document.body.classList.remove("hidden");
-    });
-  }
-
-  spanPopUp.forEach((span) => {
-    span.addEventListener("click", function () {
-      const popUpBack = document.querySelector(".pop-up-wrap");
-      const arrPopUp = document.querySelectorAll(".pop-up__close-wrap");
-      for (let popUp of arrPopUp) {
-        if (span.dataset.pop === popUp.dataset.pop) {
-          showPopUp(popUp, popUpBack);
-          closePopUp(popUp, popUpBack);
-        }
-      }
-    });
-  });
-}
 iniziateShowPopUp();
 
 //FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS
 
-document.querySelector("[data-open]").addEventListener("click", () => {
-  document.querySelector("[data-open]").classList.toggle("tags__btn--arrow-active");
-  document.querySelector(".tags-array").classList.toggle("tags-array--active");
-});
-
-
+// document.querySelector("[data-open]").addEventListener("click", () => {
+//   document.querySelector("[data-open]").classList.toggle("tags__btn--arrow-active");
+//   document.querySelector(".tags-array").classList.toggle("tags-array--active");
+// });
