@@ -1,6 +1,7 @@
 import createHelperText from "./helper-text.js";
 import initializeNestedLists from "./nested-list.js";
 import initialSlider from "./slider.js";
+import searchTags from "./finished-projects.js";
 
 //Slider
 const buttonNext = document.querySelector(".progress-line__arrow-next");
@@ -91,3 +92,12 @@ function iniziateShowPopUp() {
   });
 }
 iniziateShowPopUp();
+
+//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS//FINISHED-PROJECTS
+
+document.querySelector("[data-open]").addEventListener("click", () => {
+  document.querySelector("[data-open]").classList.toggle("tags__btn--arrow-active");
+  document.querySelector(".tags-array").classList.toggle("tags-array--active");
+});
+
+

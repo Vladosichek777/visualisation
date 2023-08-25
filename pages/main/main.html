@@ -569,27 +569,27 @@
                 <div class="finished-projects-inner">
                     <h2 class="finished-projects-inner__title">Какие проекты мы уже реализовали</h2>
                     <div class="tags">
-                        <div class="tags-array tags-array--active">
-                            <button class="button button--inherit button--tags" data-tag="#архитектура"><span>#архитектура</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#комплексная застройка"><span>#комплексная застройка</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#интерьеры"><span>#интерьеры</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#благоустройство"><span>#благоустройство</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#анимация"><span>#анимация</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#3D, VR, видео"><span>#3D, VR, видео</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#промышленные объекты"><span>#промышленные объекты</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#дополнительные материалы"><span>#дополнительные материалы</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#предметная визуализация"><span>#предметная визуализация</span></button>
-                            <button class="button button--inherit button--tags" data-tag="#генплан"><span>#генплан</span></button>
-                            <button class="tags__btn tags__btn--desctop">Сбросить фильтры</button>
+                        <div class="tags-array">
+                            <button class="button button--inherit button--tags" data-tag="архитектура"><span>#архитектура</span></button>
+                            <button class="button button--inherit button--tags" data-tag="комплексная застройка"><span>#комплексная застройка</span></button>
+                            <button class="button button--inherit button--tags" data-tag="интерьеры"><span>#интерьеры</span></button>
+                            <button class="button button--inherit button--tags" data-tag="благоустройство"><span>#благоустройство</span></button>
+                            <button class="button button--inherit button--tags" data-tag="анимация"><span>#анимация</span></button>
+                            <button class="button button--inherit button--tags" data-tag="3D, VR, видео"><span>#3D, VR, видео</span></button>
+                            <button class="button button--inherit button--tags" data-tag="промышленные объекты"><span>#промышленные объекты</span></button>
+                            <button class="button button--inherit button--tags" data-tag="дополнительные материалы"><span>#дополнительные материалы</span></button>
+                            <button class="button button--inherit button--tags" data-tag="предметная визуализация"><span>#предметная визуализация</span></button>
+                            <button class="button button--inherit button--tags" data-tag="генплан"><span>#генплан</span></button>
+                            <button class="tags__btn tags__btn--desctop" data-clear>Сбросить фильтры</button>
                         </div>
                         <div class="tags-filter">
-                            <button class="tags__btn tags__btn--arrow">Фильтр</button>
-                            <button class="tags__btn">Сбросить фильтры</button>
+                            <button class="tags__btn tags__btn--arrow" data-open>Фильтр</button>
+                            <button class="tags__btn" data-clear>Сбросить фильтры</button>
                         </div>
                     </div>
                     <section class="projects">
                         <div class="projects__left">
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="архитектура,интерьеры">
                                 <img class="projects__image" src="../../assets/images/projects/senator.png" alt="senator">
                                 <div class="item-info">
                                     <h3 class="item-info__title">Senator</h3>
@@ -597,7 +597,7 @@
                                     <span class="item-info__tag">#интерьеры</span>
                                 </div>
                             </a>
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="промышленные объекты,генплан">
                                 <img class="projects__image" src="../../assets/images/projects/Mysovskiy.png" alt="Mysovskiy">
                                 <div class="item-info">
                                     <h3 class="item-info__title">Mysovskiy</h3>
@@ -605,7 +605,7 @@
                                     <span class="item-info__tag">#генплан</span>
                                 </div>
                             </a>
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="архитектура,комплексная застройка,3D, VR, видео">
                                 <img class="projects__image" src="../../assets/images/projects/GrandGrand2.png" alt="GG">
                                 <div class="item-info">
                                     <h3 class="item-info__title">GrandGrand</h3>
@@ -616,7 +616,7 @@
                             </a>
                         </div>
                         <div class="projects__right">
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="анимация,предметная визуализация">
                                 <img class="projects__image" src="../../assets/images/projects/urbanika.png" alt="urbanika">
                                 <div class="item-info">
                                     <h3 class="item-info__title">urbanika</h3>
@@ -624,7 +624,7 @@
                                     <span class="item-info__tag">#предметная визуализация</span>
                                 </div>
                             </a>
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="промышленные объекты,комплексная застройка">
                                 <img class="projects__image" src="../../assets/images/projects/GrandGrand.png" alt="GrandGrand">
                                 <div class="item-info">
                                     <h3 class="item-info__title">GrandGrand</h3>
@@ -632,7 +632,7 @@
                                     <span class="item-info__tag">#комплексная застройка</span>
                                 </div>
                             </a>
-                            <a href="#" class="projects__item">
+                            <a href="#" class="projects__item" data-tag="благоустройство,дополнительные материалы">
                                 <img class="projects__image" src="../../assets/images/projects/collection-mebel.png" alt="collection">
                                 <div class="item-info">
                                     <h3 class="item-info__title">collection-mebel</h3>

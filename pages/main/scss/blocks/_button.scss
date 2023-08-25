@@ -64,6 +64,12 @@
       background-color: $main-color;
       color: #fff;
       border-color: $main-color;
+
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+        border-color: $main-color;
+      }
     }
   }
 }

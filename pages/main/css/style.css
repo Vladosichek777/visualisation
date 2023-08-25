@@ -436,6 +436,11 @@ body {
   color: #fff;
   border-color: rgb(234, 76, 20);
 }
+.button--tags-active:hover {
+  background-color: rgb(234, 76, 20);
+  color: #fff;
+  border-color: rgb(234, 76, 20);
+}
 
 @media (max-width: 1000px) {
   .button--sticky {
@@ -1623,6 +1628,9 @@ body {
 .projects__image:hover {
   filter: grayscale(0);
 }
+.projects__image--active {
+  filter: grayscale(0);
+}
 .projects__item {
   position: relative;
   overflow: hidden;
@@ -1989,12 +1997,25 @@ body {
 .tags__btn--arrow {
   display: flex;
   align-items: center;
+  color: white;
+  transition: all 0.4s;
 }
 .tags__btn--arrow::before {
   content: url(../../../assets/icons/nested-list/arrow-bottom-inactive.svg);
   margin-right: 10px;
   display: block;
   transform: rotate(-90deg);
+  transition: all 0.4s;
+}
+.tags__btn--arrow-active {
+  color: rgb(234, 76, 20);
+}
+.tags__btn--arrow-active::before {
+  content: url(../../../assets/icons/nested-list/arrow-bottom-active.svg);
+  margin-right: 10px;
+  display: block;
+  transform: rotate(0deg);
+  transition: all 0.4s;
 }
 
 @media (max-width: 800px) {

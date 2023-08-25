@@ -269,11 +269,25 @@
     &--arrow {
       display: flex;
       align-items: center;
+      color: #ffff;
+      transition: all 0.4s;
       &::before {
         content: url(../../../assets/icons/nested-list/arrow-bottom-inactive.svg);
         margin-right: 10px;
         display: block;
         transform: rotate(-90deg);
+        transition: all 0.4s;
+      }
+
+      &-active {
+        color: $main-color;
+        &::before {
+          content: url(../../../assets/icons/nested-list/arrow-bottom-active.svg);
+          margin-right: 10px;
+          display: block;
+          transform: rotate(0deg);
+          transition: all 0.4s;
+        }
       }
     }
   }
