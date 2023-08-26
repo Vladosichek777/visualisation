@@ -2,7 +2,7 @@ function searchTags() {
   const projectsItem = document.querySelectorAll(".projects__item");
   const tagBtn = document.querySelectorAll(".button--tags");
   const arrayTargetTags = [];
-  const buttonClearAllTag = document.querySelector("[data-clear]");
+  const buttonClearAllTag = document.querySelectorAll("[data-clear]");
 
   function searchPossibleImages() {
     //If arrayTargetTags doesn't include any tags
@@ -53,8 +53,10 @@ function searchTags() {
   tagBtn.forEach((button) => {
     workWithArrayTag(button);
   });
-  buttonClearAllTag.addEventListener("click", () => {
-    clearTagAndImage();
+  buttonClearAllTag.forEach((button) => {
+    button.addEventListener("click", () => {
+      clearTagAndImage();
+    });
   });
 }
 searchTags();

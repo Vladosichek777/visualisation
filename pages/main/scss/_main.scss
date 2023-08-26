@@ -295,7 +295,7 @@
 
 @media (max-width: 800px) {
   .tags {
-    flex-direction: column;
+    display: none;
     &__btn {
       margin-left: 0;
       &--desctop {

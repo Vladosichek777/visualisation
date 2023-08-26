@@ -72,3 +72,6 @@ document.querySelector("[data-open]").addEventListener("click", () => {
   document.querySelector("[data-open]").classList.toggle("tags__btn--arrow-active");
   document.querySelector(".tags-array").classList.toggle("tags-array--active");
 });
+
+
+let a = 'hello'
