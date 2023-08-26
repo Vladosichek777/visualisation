@@ -59,8 +59,7 @@ observer.observe(animationNumberSection);
 observer.observe(runNumber);
 
 // initializeNestedLists
-
-initializeNestedLists();
+initializeNestedLists(".nested-lists-questions__item[data-top]", ".nested-lists-answers-item[data-bottom='answer2']", ".dropdown-answer[data-drop='top']");
 // POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP// POP-UP
 
 iniziateShowPopUp();
@@ -72,6 +71,3 @@ document.querySelector("[data-open]").addEventListener("click", () => {
   document.querySelector("[data-open]").classList.toggle("tags__btn--arrow-active");
   document.querySelector(".tags-array").classList.toggle("tags-array--active");
 });
-
-
-let a = 'hello'

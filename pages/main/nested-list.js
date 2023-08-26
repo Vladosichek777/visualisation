@@ -1,8 +1,8 @@
 //nested-list
-function initializeNestedLists() {
-  const nestedListQuestions = document.querySelectorAll(".nested-lists-questions__item");
-  const nestedListAnswersBlock = document.querySelectorAll(".nested-lists-answers-item[data-group]");
-  const dropDownAnswers = document.querySelectorAll(".dropdown-answer");
+function initializeNestedLists(questions, answersBlock, dropDownAnswer) {
+  const nestedListQuestions = document.querySelectorAll(questions);
+  const nestedListAnswersBlock = document.querySelectorAll(answersBlock);
+  const dropDownAnswers = document.querySelectorAll(dropDownAnswer);
 
   function showAnswerBlock(question) {
     nestedListAnswersBlock.forEach((answersBlock) => {
@@ -47,7 +47,5 @@ function initializeNestedLists() {
     });
   });
 }
-initializeNestedLists();
-
 
 export default initializeNestedLists;
